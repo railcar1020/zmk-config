@@ -1,7 +1,6 @@
 name: Build ZMK firmware
 on: [push, pull_request, workflow_dispatch]
-run: |
-    west build -b nice_nano_v2 -- -DSHIELD=ferris_sweep
+run: west build -b nice_nano_v2 -- -DSHIELD=ferris_sweep
 jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
